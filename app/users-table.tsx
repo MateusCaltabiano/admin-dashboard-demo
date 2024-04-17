@@ -73,7 +73,6 @@ function UserRow({ user }: { user: SelectUser }) {
           size="sm"
           variant="outline"
           formAction={deleteUserWithId}
-          disabled
         >
           Delete
         </Button>
