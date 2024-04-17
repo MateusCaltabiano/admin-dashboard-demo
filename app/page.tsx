@@ -17,7 +17,7 @@ export default async function IndexPage({
       <div className="flex justify-between items-center mb-8">
         <h1 className="font-semibold text-lg md:text-2xl">Users</h1>
         <nav className="text-lg h-11 rounded-md px-8 font-semibold border border-input bg-background hover:bg-accent hover:text-accent-foreground">
-          <NavItem href="/addUser">New user</NavItem>
+          <NavItem href="/addUser">Add user</NavItem>
         </nav>
       </div>
       <div className="w-full mb-4">
