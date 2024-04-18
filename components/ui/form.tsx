@@ -3,7 +3,7 @@ import { useFormState } from 'react-dom';
 import { NewUser } from 'app/actions';
 
 const initialState = {
-  message: null
+  message: ''
 };
 
 export function NewUserForm() {
