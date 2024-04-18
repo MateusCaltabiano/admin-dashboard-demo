@@ -5,33 +5,30 @@ export default async function AddUserPage() {
         <h1 className="font-semibold text-lg md:text-2xl">Add User</h1>
       </div>
       <div>
-        <form>
+        <form id="new-user-form">
           <div className="flex flex-col size-80 space-y-2">
+            <label htmlFor="name">Name</label>
             <input
-              className="border border-black rounded-md text-slate-400"
-              value="Name"
+              className="border border-black rounded-md"
               type="text"
               id="name"
-              name="name"
             ></input>
+            <label htmlFor="email">Email</label>
             <input
-              className="border border-black rounded-md text-slate-400"
-              value="Email"
+              className="border border-black rounded-md"
               type="text"
               id="email"
-              name="email"
             ></input>
+            <label htmlFor="username">Username</label>
             <input
-              className="border border-black rounded-md text-slate-400"
-              value="Username"
+              className="border border-black rounded-md"
               type="text"
               id="username"
-              name="username"
             ></input>
             <input
-              className="border border-black rounded-lg w-20 self-auto"
+              className="border border-black rounded-lg w-20"
               type="submit"
-              value="Create"
+              value="Add"
             ></input>
           </div>
         </form>
