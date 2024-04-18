@@ -54,12 +54,12 @@ export async function deleteUserById(id: number) {
   await db.delete(users).where(eq(users.id, id));
 }
 
-// export async function addNewUser(
-//   name: string,
-//   email: string,
-//   username: string
-// ) {
-//   await db
-//     .insert(users)
-//     .values({ name: name, email: email, username: username });
-// }
+export async function addNewUser(
+  name: string,
+  email: string,
+  username: string
+) {
+  await db
+    .insert(users)
+    .values({ name: name, email: email, username: username });
+}
