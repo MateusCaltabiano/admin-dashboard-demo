@@ -32,3 +32,5 @@ export async function NewUser(prevState: any, formData: FormData) {
     return { message: `Failed to add new user` };
   }
 }
+
+export async function editUser(userId: number) {}
