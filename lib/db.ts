@@ -63,3 +63,15 @@ export async function addNewUser(
     .insert(users)
     .values({ name: name, email: email, username: username });
 }
+
+export async function editUserById(
+  id: number,
+  name: string,
+  email: string,
+  username: string
+) {
+  await db
+    .update(users)
+    .set({ name: name, email: email, username: username })
+    .where(eq(users.id, id));
+}
