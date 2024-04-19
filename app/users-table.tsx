@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import { SelectUser } from '@/lib/db';
-import { deleteUser } from './actions';
+import { deleteUser, editUser } from './actions';
 import { useRouter } from 'next/navigation';
 
 export function UsersTable({
@@ -61,6 +61,7 @@ export function UsersTable({
 function UserRow({ user }: { user: SelectUser }) {
   const userId = user.id;
   const deleteUserWithId = deleteUser.bind(null, userId);
+  const editUserWithId = editUser.bind(null, userId);
 
   return (
     <TableRow>
@@ -72,6 +73,16 @@ function UserRow({ user }: { user: SelectUser }) {
           className="w-full"
           size="sm"
           variant="outline"
+          formAction={editUserWithId}
+        >
+          Edit
+        </Button>
+      </TableCell>
+      <TableCell>
+        <Button
+          className="w-full"
+          size="sm"
+          variant="destructive"
           formAction={deleteUserWithId}
         >
           Delete
